@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+
+  legendary_winner:
+    build: .
+
+
+  mysql:
+    image: mysql
