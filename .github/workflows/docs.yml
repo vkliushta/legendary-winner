@@ -1,0 +1,21 @@
+name: Build docs
+
+on:
+  push:
+    branches:
+#      - main
+    paths:
+      - "docs/**"
+      -
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REQUIREMENTS: reqs/docs-requirements.txt

@@ -2,4 +2,10 @@ fastapi
 uvicorn[standard]
 mysqlclient
 sqlalchemy
-pyjwt
+python-jose
+passlib
+python-multipart
+alembic
+bcrypt
+cachetools
+pydantic-settings
